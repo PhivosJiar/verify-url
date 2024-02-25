@@ -1,4 +1,5 @@
 # verify url
+A Node.js package for verifying the validity and reachability of URLs.
 
 ## Usage
 Using npm:
