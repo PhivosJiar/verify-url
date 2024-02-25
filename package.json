@@ -1,4 +1,28 @@
 {
+  "name": "verify-url",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhivosJiar/verify-url.git"
+  },
+  "keywords": [
+    "verify",
+    "url",
+    "valid",
+    "valid-url",
+    "verify-url"
+  ],
+  "author": "Jiar Phivos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhivosJiar/verify-url/issues"
+  },
+  "homepage": "https://github.com/PhivosJiar/verify-url#readme",
+  "description": "",
   "scripts": {
     "test": "jest"
   },
