@@ -11,4 +11,3 @@ var isValidFormat = function (url) {
     return urlPattern.test(url);
 };
 exports.isValidFormat = isValidFormat;
-console.log((0, exports.isValidFormat)("http://example"));

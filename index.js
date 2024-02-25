@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.isValidUrl = void 0;
 var axios_1 = require("axios");
 var verifyUrlFormat_1 = require("./utils/verifyUrlFormat");
 /**
@@ -55,7 +56,9 @@ var isValidUrl = function (url) { return __awaiter(void 0, void 0, void 0, funct
             case 1:
                 _a.trys.push([1, 3, , 4]);
                 // Attempt to send a HEAD request to the URL to verify its reachability
-                return [4 /*yield*/, axios_1.default.head(url)];
+                return [4 /*yield*/, axios_1.default.head(url, {
+                        timeout: 3000,
+                    })];
             case 2:
                 // Attempt to send a HEAD request to the URL to verify its reachability
                 _a.sent();
@@ -67,3 +70,4 @@ var isValidUrl = function (url) { return __awaiter(void 0, void 0, void 0, funct
         }
     });
 }); };
+exports.isValidUrl = isValidUrl;
