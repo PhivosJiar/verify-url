@@ -38,18 +38,26 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var axios_1 = require("axios");
 var verifyUrlFormat_1 = require("./utils/verifyUrlFormat");
+/**
+ * Checks if the given URL has a valid format and if it is reachable.
+ * @param {string} url - The URL to be checked.
+ * @returns {Promise<boolean>} - A Promise that resolves to true if the URL is valid and reachable, otherwise false.
+ */
 var isValidUrl = function (url) { return __awaiter(void 0, void 0, void 0, function () {
     var error_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
+                // Check if URL has a valid format
                 if (!(0, verifyUrlFormat_1.isValidFormat)(url))
                     return [2 /*return*/, false];
                 _a.label = 1;
             case 1:
                 _a.trys.push([1, 3, , 4]);
+                // Attempt to send a HEAD request to the URL to verify its reachability
                 return [4 /*yield*/, axios_1.default.head(url)];
             case 2:
+                // Attempt to send a HEAD request to the URL to verify its reachability
                 _a.sent();
                 return [2 /*return*/, true];
             case 3:
@@ -59,4 +67,3 @@ var isValidUrl = function (url) { return __awaiter(void 0, void 0, void 0, funct
         }
     });
 }); };
-isValidUrl("https://github.@").then(function (result) { return console.log(result); });
